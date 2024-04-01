@@ -1,3 +1,4 @@
+import 'package:beework_coworking/screens/marketplace_screen.dart';
 import 'package:beework_coworking/screens/reservas_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -56,7 +57,7 @@ class HomePage extends StatelessWidget {
                       backgroundColor:MaterialStatePropertyAll(Colors.black)
                     ),
                     onPressed: () {
-                      
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => MarketplaceScreen()));
                     },
                     icon: const Icon(Icons.trolley),
                     label: const Text("Market Place",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)

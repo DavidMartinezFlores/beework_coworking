@@ -54,14 +54,14 @@ class _ReservasScreenState extends State<ReservasScreen> {
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra+=screenSize.height*0.1;
+                            expansionTileSizeExtra+=screenSize.height*0.13;
                           });
                         }
                         else
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra-=screenSize.height*0.1;
+                            expansionTileSizeExtra-=screenSize.height*0.13;
                           });
                         }
                       },
@@ -122,14 +122,14 @@ class _ReservasScreenState extends State<ReservasScreen> {
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra+=screenSize.height*0.1;
+                            expansionTileSizeExtra+=screenSize.height*0.13;
                           });
                         }
                         else
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra-=screenSize.height*0.1;
+                            expansionTileSizeExtra-=screenSize.height*0.13;
                           });
                         }
                       },
@@ -187,11 +187,11 @@ class _ReservasScreenState extends State<ReservasScreen> {
                       onExpansionChanged: (value) {
                         if(value)
                         {
-                          expansionTileSizeExtra+=screenSize.height*0.1;
+                          expansionTileSizeExtra+=screenSize.height*0.13;
                         }
                         else
                         {
-                          expansionTileSizeExtra-=screenSize.height*0.1;
+                          expansionTileSizeExtra-=screenSize.height*0.13;
                         }
                       },
                       title: const Text("Bonos Escritorio por dia",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),),
@@ -208,14 +208,14 @@ class _ReservasScreenState extends State<ReservasScreen> {
                               {
                                 
                                 setState(() {
-                                  expansionTileSizeExtra+=screenSize.height*0.1;
+                                  expansionTileSizeExtra+=screenSize.height*0.13;
                                 });
                               }
                               else
                               {
                                 
                                 setState(() {
-                                  expansionTileSizeExtra-=screenSize.height*0.1;
+                                  expansionTileSizeExtra-=screenSize.height*0.13;
                                 });
                               }
                             },
@@ -269,14 +269,14 @@ class _ReservasScreenState extends State<ReservasScreen> {
                               {
                                 
                                 setState(() {
-                                  expansionTileSizeExtra+=screenSize.height*0.1;
+                                  expansionTileSizeExtra+=screenSize.height*0.13;
                                 });
                               }
                               else
                               {
                                 
                                 setState(() {
-                                  expansionTileSizeExtra-=screenSize.height*0.1;
+                                  expansionTileSizeExtra-=screenSize.height*0.13;
                                 });
                               }
                             },
@@ -344,14 +344,14 @@ class _ReservasScreenState extends State<ReservasScreen> {
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra+=screenSize.height*0.1;
+                            expansionTileSizeExtra+=screenSize.height*0.13;
                           });
                         }
                         else
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra-=screenSize.height*0.1;
+                            expansionTileSizeExtra-=screenSize.height*0.13;
                           });
                         }
                       },
@@ -411,14 +411,14 @@ class _ReservasScreenState extends State<ReservasScreen> {
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra+=screenSize.height*0.1;
+                            expansionTileSizeExtra+=screenSize.height*0.13;
                           });
                         }
                         else
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra-=screenSize.height*0.1;
+                            expansionTileSizeExtra-=screenSize.height*0.13;
                           });
                         }
                       },
@@ -478,14 +478,14 @@ class _ReservasScreenState extends State<ReservasScreen> {
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra+=screenSize.height*0.1;
+                            expansionTileSizeExtra+=screenSize.height*0.13;
                           });
                         }
                         else
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra-=screenSize.height*0.1;
+                            expansionTileSizeExtra-=screenSize.height*0.13;
                           });
                         }
                       },
@@ -546,14 +546,14 @@ class _ReservasScreenState extends State<ReservasScreen> {
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra+=screenSize.height*0.1;
+                            expansionTileSizeExtra+=screenSize.height*0.13;
                           });
                         }
                         else
                         {
                           
                           setState(() {
-                            expansionTileSizeExtra-=screenSize.height*0.1;
+                            expansionTileSizeExtra-=screenSize.height*0.13;
                           });
                         }
                       },
