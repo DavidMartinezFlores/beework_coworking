@@ -187,11 +187,11 @@ class _ReservasScreenState extends State<ReservasScreen> {
                       onExpansionChanged: (value) {
                         if(value)
                         {
-                          expansionTileSizeExtra+=screenSize.height*0.13;
+                          expansionTileSizeExtra+=screenSize.height*0.26;
                         }
                         else
                         {
-                          expansionTileSizeExtra-=screenSize.height*0.13;
+                          expansionTileSizeExtra-=screenSize.height*0.26;
                         }
                       },
                       title: const Text("Bonos Escritorio por dia",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),),
@@ -203,22 +203,6 @@ class _ReservasScreenState extends State<ReservasScreen> {
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
                           child: ExpansionTile(
-                            onExpansionChanged: (value) {
-                              if(value)
-                              {
-                                
-                                setState(() {
-                                  expansionTileSizeExtra+=screenSize.height*0.13;
-                                });
-                              }
-                              else
-                              {
-                                
-                                setState(() {
-                                  expansionTileSizeExtra-=screenSize.height*0.13;
-                                });
-                              }
-                            },
                             title: const Text("Bonos por 1 dia",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),),
                             children: [
                               Container(
@@ -264,22 +248,6 @@ class _ReservasScreenState extends State<ReservasScreen> {
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
                           child: ExpansionTile(
-                            onExpansionChanged: (value) {
-                              if(value)
-                              {
-                                
-                                setState(() {
-                                  expansionTileSizeExtra+=screenSize.height*0.13;
-                                });
-                              }
-                              else
-                              {
-                                
-                                setState(() {
-                                  expansionTileSizeExtra-=screenSize.height*0.13;
-                                });
-                              }
-                            },
                             title: const Text("Bonos por 5 dias",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),),
                             children: [
                               Container(
