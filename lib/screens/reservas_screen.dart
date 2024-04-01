@@ -187,11 +187,17 @@ class _ReservasScreenState extends State<ReservasScreen> {
                       onExpansionChanged: (value) {
                         if(value)
                         {
-                          expansionTileSizeExtra+=screenSize.height*0.26;
+                          
+                          setState(() {
+                            expansionTileSizeExtra+=screenSize.height*0.26;
+                          });
                         }
                         else
                         {
-                          expansionTileSizeExtra-=screenSize.height*0.26;
+                          
+                          setState(() {
+                            expansionTileSizeExtra-=screenSize.height*0.26;
+                          });
                         }
                       },
                       title: const Text("Bonos Escritorio por dia",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),),
