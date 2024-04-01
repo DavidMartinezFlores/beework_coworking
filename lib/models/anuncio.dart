@@ -42,13 +42,13 @@ class Anuncio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: MediaQuery.of(context).size.width*0.9,
+        width: MediaQuery.of(context).size.width*0.97,
         child: Center(
           child: Column(
             children: [
               
               Container(
-                width: MediaQuery.of(context).size.width*0.8,
+                width: MediaQuery.of(context).size.width*0.87,
                 decoration:  
                   BoxDecoration(
                     boxShadow: [
@@ -63,7 +63,7 @@ class Anuncio extends StatelessWidget {
                      height: MediaQuery.of(context).size.height*0.01,
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width*0.79,
+                      width: MediaQuery.of(context).size.width*0.86,
                       height: MediaQuery.of(context).size.height*0.2,
                       decoration:  
                       BoxDecoration(
@@ -72,7 +72,7 @@ class Anuncio extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width*0.75,
+                      width: MediaQuery.of(context).size.width*0.82,
                       child: Column(
                         children: [
                           Text(textAlign: TextAlign.justify,this.title,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
