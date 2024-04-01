@@ -18,8 +18,11 @@ class _ReservasScreenState extends State<ReservasScreen> {
 
     return WillPopScope(
       onWillPop: () {
-        screenSize = MediaQuery.of(context).size;
-        expansionTileSizeExtra=0.0;
+        setState(() {
+          screenSize = MediaQuery.of(context).size;
+          expansionTileSizeExtra=0.0;
+        });
+
         return Future.delayed(Duration.zero,() {
           return true;
         },);
