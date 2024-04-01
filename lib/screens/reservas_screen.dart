@@ -200,14 +200,14 @@ class _ReservasScreenState extends State<ReservasScreen> {
                           {
                             
                             setState(() {
-                              expansionTileSizeExtra+=screenSize.height*0.26;
+                              expansionTileSizeExtra+=screenSize.height*0.32;
                             });
                           }
                           else
                           {
                             
                             setState(() {
-                              expansionTileSizeExtra-=screenSize.height*0.26;
+                              expansionTileSizeExtra-=screenSize.height*0.32;
                             });
                           }
                         },
