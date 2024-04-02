@@ -46,6 +46,7 @@ class _MesState extends State<Mes> {
           title: Text(widget.mes,style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),),
           children: [
             Container(
+              padding: EdgeInsets.all(10),
               width: screenSize.width*0.8,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10)),

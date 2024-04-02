@@ -6,18 +6,56 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 var dateTime = DateTime.now();
-// ignore: must_be_immutable
-class DiasScreen extends StatefulWidget {
-  double valorMonetario;
-    DiasScreen({super.key,required this.valorMonetario});
+var horas = 1;
 
-  @override
-  State<DiasScreen> createState() => _DiasScreenState();
+
+// ignore: must_be_immutable
+class DiasScreenHoras extends StatefulWidget {
+  double valorMonetario;
+    DiasScreenHoras({super.key,required this.valorMonetario});
+
+
+  State<DiasScreenHoras> createState() => _DiasScreenHorasState();
 }
 
-class _DiasScreenState extends State<DiasScreen> {
+class _DiasScreenHorasState extends State<DiasScreenHoras> {
+  @override
+
+
   @override
   Widget build(BuildContext context) {
+    // Initial Selected Value 
+    String dropdownvalue = 'Seleccionar Horas';    
+
+    // List of items in our dropdown menu 
+    var items = [ 
+      'Seleccionar Horas',    
+      '1', 
+      '2', 
+      '3', 
+      '4', 
+      '5', 
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12',
+      '13',
+      '14',
+      '15',
+      '16',
+      '17',
+      '18',
+      '19',
+      '20',
+      '21',
+      '22',
+      '23',
+      '24',
+
+    ]; 
 
     var provider = context.watch<TrollyProvider>();
     var screenSize = MediaQuery.of(context).size;
@@ -71,7 +109,7 @@ class _DiasScreenState extends State<DiasScreen> {
                       // --- BOTON CAMBIAR FECHA ---
                       FilledButton.icon(
                         onPressed: () {
-                          Container();
+                          
                           showCupertinoModalPopup(
                               barrierColor:  Theme.of(context).secondaryHeaderColor.withOpacity(0.3),
                               context: context,
@@ -105,9 +143,62 @@ class _DiasScreenState extends State<DiasScreen> {
                       SizedBox(
                         height: screenSize.height*0.1,
                       ),
+                      Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text("Nº de horas: ${horas}",style: TextStyle(backgroundColor: const Color.fromARGB(255, 145, 145, 145),color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 28,fontStyle:FontStyle.italic),),
+                            SizedBox(
+                              height: screenSize.height*0.01,
+                            ),
+                            Container(
+                              
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(20)),
+                                color: Colors.white,
+                              ),
+                              width: screenSize.width*0.5,
+                              child: 
+                              DropdownButton(
+                                borderRadius: BorderRadius.all(Radius.circular(20)),
+                                // Initial Value 
+                                value: dropdownvalue, 
+                                  
+                                // Down Arrow Icon 
+                                icon: const Icon(Icons.keyboard_arrow_down),     
+                                  
+                                // Array list of items 
+                                items: items.map((String items) { 
+                                  return DropdownMenuItem( 
+                                    value: items, 
+                                    child: Text(items), 
+                                  ); 
+                                }).toList(), 
+                                // After selecting the desired option,it will 
+                                // change button value to selected value 
+                                onChanged: (String? newValue) {  
+                                  setState(() { 
+                                    if(newValue!="Seleccionar Horas")
+                                    {
+                                    dropdownvalue = newValue!;
+                                    
+                                    horas=int.parse(dropdownvalue); 
+                                    }
+                                  }); 
+                                }, 
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      
+                      SizedBox(
+                        height: screenSize.height*0.1,
+                      ),
                       FilledButton.icon(
                         style: const ButtonStyle(
-                          backgroundColor:MaterialStatePropertyAll(Colors.black)
+                          backgroundColor: MaterialStatePropertyAll(Colors.black)
                         ),
                         onPressed: () {
                           showDialog(
@@ -117,10 +208,10 @@ class _DiasScreenState extends State<DiasScreen> {
                             builder: (BuildContext context) => AlertDialog(
                               backgroundColor: Color.fromARGB(255, 255, 255, 255),
                               title: Center(child: Text("CONFIRMAR",style: TextStyle(color: const Color.fromARGB(255, 189, 142, 0),fontWeight: FontWeight.bold),)),
-                              content: Text(textAlign: TextAlign.justify,"Desas reservar el día de ${dateTime.day}/${dateTime.month}/${dateTime.year} por ${widget.valorMonetario}€ ?"),
+                              content: Text("Desas reservar el día de ${dateTime.day}/${dateTime.month}/${dateTime.year} ($horas horas) por ${widget.valorMonetario*horas}€ ?"),
                               actions: [
                                 TextButton(child: Text("Confirmar",style: TextStyle(color: const Color.fromARGB(255, 0, 122, 4))), onPressed: () {
-                                  provider.addCarrito(widget.valorMonetario);
+                                  provider.addCarrito(widget.valorMonetario*horas);
                                   print("added");
                                   Navigator.pop(context);
 
@@ -131,7 +222,7 @@ class _DiasScreenState extends State<DiasScreen> {
                                     builder: (BuildContext context) => AlertDialog(
                                       backgroundColor: Color.fromARGB(255, 255, 255, 255),
                                       title: Center(child: Text("RESERVADO",style: TextStyle(color:  const Color.fromARGB(255, 189, 142, 0),fontWeight: FontWeight.bold),)),
-                                      content: Text(textAlign: TextAlign.justify,"Reservado día ${dateTime.day}/${dateTime.month}/${dateTime.year} por ${widget.valorMonetario}€ exitosamente"),
+                                      content: Text("Reservado día ${dateTime.day}/${dateTime.month}/${dateTime.year} ($horas horas) por ${widget.valorMonetario*horas}€ exitosamente"),
                                       actions: [
                                         TextButton(child: Text("Confirmar",style: TextStyle(color: const Color.fromARGB(255, 0, 122, 4))), onPressed: () {
                                           Navigator.pop(context);

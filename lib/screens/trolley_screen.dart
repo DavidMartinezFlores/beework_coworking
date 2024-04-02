@@ -1,5 +1,6 @@
 import 'package:beework_coworking/providers/trolly_provider.dart';
 import 'package:beework_coworking/screens/home_screen.dart';
+import 'package:beework_coworking/screens/pago_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -55,7 +56,7 @@ class TrolleyScreen extends StatelessWidget {
                       backgroundColor:MaterialStatePropertyAll(Colors.black)
                     ),
                     onPressed: () {
-                      
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => PagoScreen(),));
                     },
                     icon: const Icon(Icons.monetization_on),
                     label: const Text("Realizar Pago",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
@@ -86,7 +87,7 @@ class TrolleyScreen extends StatelessWidget {
                           image: DecorationImage(image: AssetImage("assets/images/beeWorkLogo.png"),fit:BoxFit.cover),
                         ),
                       ),
-                    title: Text("BeeWork Cooworking"),
+                    title: Text("BeeWork Coworking"),
                     subtitle: Text("Corredera Capuchinos Nº20\nAndújar, Jaén"),
                   )
                 ],

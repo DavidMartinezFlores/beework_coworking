@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class TrollyProvider extends ChangeNotifier
 {
+  var focusNode= FocusNode();
   double valorCarrito = 0.0;
 
   void addCarrito(double valor)

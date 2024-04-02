@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => ReservasScreen()));
                     },
                     icon: const Icon(Icons.book),
-                    label: const Text("Reserva",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
+                    label: const Text("Reserva",style: TextStyle(fontSize: 18,color: Colors.amber,fontWeight: FontWeight.bold),)
                   ),
             
                   SizedBox(
@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => MarketplaceScreen()));
                     },
                     icon: const Icon(Icons.trolley),
-                    label: const Text("Market Place",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
+                    label: const Text("Market Place",style: TextStyle(fontSize: 18,color: Colors.amber,fontWeight: FontWeight.bold),)
                   ),
             
                   SizedBox(
@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => TrolleyScreen()));
                     },
                     icon: const Icon(Icons.payment),
-                    label: const Text("Pago",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
+                    label: const Text("Pago",style: TextStyle(fontSize: 18,color: Colors.amber,fontWeight: FontWeight.bold),)
                   ),
       
                   SizedBox(
@@ -99,7 +99,7 @@ class HomePage extends StatelessWidget {
                           image: DecorationImage(image: AssetImage("assets/images/beeWorkLogo.png"),fit:BoxFit.cover),
                         ),
                       ),
-                    title: Text("BeeWork Cooworking"),
+                    title: Text("BeeWork Coworking"),
                     subtitle: Text("Corredera Capuchinos Nº20\nAndújar, Jaén"),
                   )
                 ],

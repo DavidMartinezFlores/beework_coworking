@@ -152,7 +152,7 @@ class _MesesScreenState extends State<MesesScreen> {
                               image: DecorationImage(image: AssetImage("assets/images/beeWorkLogo.png"),fit:BoxFit.cover),
                             ),
                           ),
-                        title: Text("BeeWork Cooworking"),
+                        title: Text("BeeWork Coworking"),
                         subtitle: Text("Corredera Capuchinos Nº20\nAndújar, Jaén"),
                       )
                     ]

@@ -1,3 +1,4 @@
+import 'package:beework_coworking/screens/dias_screen%20horas.dart';
 import 'package:beework_coworking/screens/dias_screen.dart';
 import 'package:beework_coworking/screens/five_dias_screen.dart';
 import 'package:beework_coworking/screens/home_screen.dart';
@@ -38,6 +39,10 @@ class _ReservasScreenState extends State<ReservasScreen> {
           actions: [
             IconButton(
             onPressed: () {
+              setState(() {
+                screenSize = MediaQuery.of(context).size;
+                expansionTileSizeExtra=0.0;
+              });
               Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
             },
             color: Colors.orange,
@@ -45,6 +50,10 @@ class _ReservasScreenState extends State<ReservasScreen> {
           ),
             IconButton(
               onPressed: () {
+                setState(() {
+                  screenSize = MediaQuery.of(context).size;
+                  expansionTileSizeExtra=0.0;
+                });
                 Navigator.push(context, MaterialPageRoute(builder: (context) => TrolleyScreen(),));
               },
               color: Colors.orange,
@@ -584,7 +593,7 @@ class _ReservasScreenState extends State<ReservasScreen> {
                                     backgroundColor:MaterialStatePropertyAll(Colors.black)
                                   ),
                                   onPressed: () {
-                                    
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => DiasScreenHoras(valorMonetario: 30),));
                                   },
                                   icon: const Icon(Icons.payments_outlined),
                                   label: const Text("Reservar",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
@@ -615,7 +624,7 @@ class _ReservasScreenState extends State<ReservasScreen> {
                             image: DecorationImage(image: AssetImage("assets/images/beeWorkLogo.png"),fit:BoxFit.cover),
                           ),
                         ),
-                      title: Text("BeeWork Cooworking"),
+                      title: Text("BeeWork Coworking"),
                       subtitle: Text("Corredera Capuchinos Nº20\nAndújar, Jaén"),
                     )
                   ]

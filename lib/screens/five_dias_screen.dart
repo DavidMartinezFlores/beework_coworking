@@ -73,7 +73,7 @@ class _FiveDiasScreenState extends State<FiveDiasScreen> {
                         height: screenSize.height*0.01,
                       ),
 
-                      Text("Dia seleccionado 1: ${dateTime1.day}/${dateTime1.month}/${dateTime1.year}",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
+                      Text("Dia seleccionado 1: ${dateTime1.day}/${dateTime1.month}/${dateTime1.year}",style: TextStyle(backgroundColor: const Color.fromARGB(255, 145, 145, 145),color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
                       // --- BOTON CAMBIAR FECHA ---
                       FilledButton.icon(
                         onPressed: () {
@@ -112,7 +112,7 @@ class _FiveDiasScreenState extends State<FiveDiasScreen> {
                         height: screenSize.height*0.01,
                       ),
 
-                      Text("Dia seleccionado 2: ${dateTime2.day}/${dateTime2.month}/${dateTime2.year}",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
+                      Text("Dia seleccionado 2: ${dateTime2.day}/${dateTime2.month}/${dateTime2.year}",style: TextStyle(backgroundColor: const Color.fromARGB(255, 145, 145, 145),color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
                       // --- BOTON CAMBIAR FECHA ---
                       FilledButton.icon(
                         onPressed: () {
@@ -152,7 +152,7 @@ class _FiveDiasScreenState extends State<FiveDiasScreen> {
                       ),
 
 
-                      Text("Dia seleccionado 3: ${dateTime3.day}/${dateTime3.month}/${dateTime3.year}",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
+                      Text("Dia seleccionado 3: ${dateTime3.day}/${dateTime3.month}/${dateTime3.year}",style: TextStyle(backgroundColor: const Color.fromARGB(255, 145, 145, 145),color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
                       // --- BOTON CAMBIAR FECHA ---
                       FilledButton.icon(
                         onPressed: () {
@@ -191,7 +191,7 @@ class _FiveDiasScreenState extends State<FiveDiasScreen> {
                         height: screenSize.height*0.01,
                       ),
 
-                      Text("Dia seleccionado 4: ${dateTime4.day}/${dateTime4.month}/${dateTime4.year}",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
+                      Text("Dia seleccionado 4: ${dateTime4.day}/${dateTime4.month}/${dateTime4.year}",style: TextStyle(backgroundColor: const Color.fromARGB(255, 145, 145, 145),color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
                       // --- BOTON CAMBIAR FECHA ---
                       FilledButton.icon(
                         onPressed: () {
@@ -230,7 +230,7 @@ class _FiveDiasScreenState extends State<FiveDiasScreen> {
                         height: screenSize.height*0.01,
                       ),
 
-                      Text("Dia seleccionado 5: ${dateTime5.day}/${dateTime5.month}/${dateTime5.year}",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
+                      Text("Dia seleccionado 5: ${dateTime5.day}/${dateTime5.month}/${dateTime5.year}",style: TextStyle(backgroundColor: const Color.fromARGB(255, 145, 145, 145),color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 18,fontStyle:FontStyle.italic),),
                       // --- BOTON CAMBIAR FECHA ---
                       FilledButton.icon(
                         onPressed: () {
@@ -361,7 +361,7 @@ class _FiveDiasScreenState extends State<FiveDiasScreen> {
                               image: DecorationImage(image: AssetImage("assets/images/beeWorkLogo.png"),fit:BoxFit.cover),
                             ),
                           ),
-                        title: Text("BeeWork Cooworking"),
+                        title: Text("BeeWork Coworking"),
                         subtitle: Text("Corredera Capuchinos Nº20\nAndújar, Jaén"),
                       )
                         ]),
