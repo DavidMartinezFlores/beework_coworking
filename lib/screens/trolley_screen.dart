@@ -1,14 +1,14 @@
-import 'package:beework_coworking/screens/marketplace_screen.dart';
-import 'package:beework_coworking/screens/reservas_screen.dart';
-import 'package:beework_coworking/screens/trolley_screen.dart';
+import 'package:beework_coworking/providers/trolly_provider.dart';
+import 'package:beework_coworking/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class TrolleyScreen extends StatelessWidget {
+  const TrolleyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
+    var provider = context.watch<TrollyProvider>();
     var screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -16,11 +16,11 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => TrolleyScreen(),));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
             },
             color: Colors.orange,
-            icon: Icon(Icons.trolley)
-          )
+            icon: Icon(Icons.home)
+          ),
         ],
         toolbarHeight: screenSize.height*0.09,
         leading: Image.asset("assets/images/beeWorkLogo.png"),
@@ -42,8 +42,24 @@ class HomePage extends StatelessWidget {
                   SizedBox(
                     height: screenSize.height*0.1,
                   ),
-                  Text("BIENVENIDO",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 28,fontStyle:FontStyle.italic),)
+                  Text("CARRITO",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold,fontSize: 28,fontStyle:FontStyle.italic),)
                   ,
+                  SizedBox(
+                    height: screenSize.height*0.1,
+                  ),
+
+                  Text("Valor actual: ${provider.valorCarrito}€",style: TextStyle(color: const Color.fromARGB(255, 24, 24, 24),fontWeight: FontWeight.bold,fontSize: 28,fontStyle:FontStyle.italic),),
+
+                  FilledButton.icon(
+                    style: const ButtonStyle(
+                      backgroundColor:MaterialStatePropertyAll(Colors.black)
+                    ),
+                    onPressed: () {
+                      
+                    },
+                    icon: const Icon(Icons.monetization_on),
+                    label: const Text("Realizar Pago",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
+                  ),
                   SizedBox(
                     height: screenSize.height*0.1,
                   ),
@@ -52,39 +68,10 @@ class HomePage extends StatelessWidget {
                       backgroundColor:MaterialStatePropertyAll(Colors.black)
                     ),
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ReservasScreen()));
+                      provider.delAll();
                     },
-                    icon: const Icon(Icons.book),
-                    label: const Text("Reserva",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
-                  ),
-            
-                  SizedBox(
-                    height: screenSize.height*0.04,
-                  ),
-            
-                  FilledButton.icon(
-                    style: const ButtonStyle(
-                      backgroundColor:MaterialStatePropertyAll(Colors.black)
-                    ),
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => MarketplaceScreen()));
-                    },
-                    icon: const Icon(Icons.trolley),
-                    label: const Text("Market Place",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
-                  ),
-            
-                  SizedBox(
-                    height: screenSize.height*0.04,
-                  ),
-                  FilledButton.icon(
-                    style: const ButtonStyle(
-                      backgroundColor:MaterialStatePropertyAll(Colors.black)
-                    ),
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => TrolleyScreen()));
-                    },
-                    icon: const Icon(Icons.payment),
-                    label: const Text("Pago",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
+                    icon: const Icon(Icons.cancel),
+                    label: const Text("Vaciar carrito",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
                   ),
       
                   SizedBox(

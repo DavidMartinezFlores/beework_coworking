@@ -1,3 +1,8 @@
+import 'package:beework_coworking/screens/dias_screen.dart';
+import 'package:beework_coworking/screens/five_dias_screen.dart';
+import 'package:beework_coworking/screens/home_screen.dart';
+import 'package:beework_coworking/screens/meses_screen.dart';
+import 'package:beework_coworking/screens/trolley_screen.dart';
 import 'package:flutter/material.dart';
 
 var expansionTileSizeExtra = 0.0;
@@ -10,6 +15,7 @@ class ReservasScreen extends StatefulWidget {
 }
 
 class _ReservasScreenState extends State<ReservasScreen> {
+  
   @override
   Widget build(BuildContext context) {
 
@@ -29,6 +35,22 @@ class _ReservasScreenState extends State<ReservasScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
+          actions: [
+            IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+            },
+            color: Colors.orange,
+            icon: Icon(Icons.home)
+          ),
+            IconButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => TrolleyScreen(),));
+              },
+              color: Colors.orange,
+              icon: Icon(Icons.trolley)
+            )
+          ],
           toolbarHeight: screenSize.height*0.09,
           leading: Image.asset("assets/images/beeWorkLogo.png"),
           backgroundColor: Colors.black,
@@ -96,7 +118,7 @@ class _ReservasScreenState extends State<ReservasScreen> {
                                     backgroundColor:MaterialStatePropertyAll(Colors.black)
                                   ),
                                   onPressed: () {
-                                    
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => MesesScreen(valorMonetario: 155,),));
                                   },
                                   icon: const Icon(Icons.payments_outlined),
                                   label: const Text("Reservar",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
@@ -164,7 +186,7 @@ class _ReservasScreenState extends State<ReservasScreen> {
                                     backgroundColor:MaterialStatePropertyAll(Colors.black)
                                   ),
                                   onPressed: () {
-                                    
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => MesesScreen(valorMonetario:220),));
                                   },
                                   icon: const Icon(Icons.payments_outlined),
                                   label: const Text("Reservar",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
@@ -240,7 +262,7 @@ class _ReservasScreenState extends State<ReservasScreen> {
                                           backgroundColor:MaterialStatePropertyAll(Colors.black)
                                         ),
                                         onPressed: () {
-                                          
+                                          Navigator.push(context, MaterialPageRoute(builder: (context) => DiasScreen(valorMonetario: 20),));
                                         },
                                         icon: const Icon(Icons.payments_outlined),
                                         label: const Text("Reservar",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
@@ -285,7 +307,7 @@ class _ReservasScreenState extends State<ReservasScreen> {
                                           backgroundColor:MaterialStatePropertyAll(Colors.black)
                                         ),
                                         onPressed: () {
-                                          
+                                          Navigator.push(context, MaterialPageRoute(builder: (context) => FiveDiasScreen(valorMonetario: 80),));
                                         },
                                         icon: const Icon(Icons.payments_outlined),
                                         label: const Text("Reservar",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
@@ -360,7 +382,7 @@ class _ReservasScreenState extends State<ReservasScreen> {
                                     backgroundColor:MaterialStatePropertyAll(Colors.black)
                                   ),
                                   onPressed: () {
-                                    
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => MesesScreen(valorMonetario:350),));
                                   },
                                   icon: const Icon(Icons.payments_outlined),
                                   label: const Text("Reservar",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
@@ -427,7 +449,7 @@ class _ReservasScreenState extends State<ReservasScreen> {
                                     backgroundColor:MaterialStatePropertyAll(Colors.black)
                                   ),
                                   onPressed: () {
-                                    
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => MesesScreen(valorMonetario:30),));
                                   },
                                   icon: const Icon(Icons.payments_outlined),
                                   label: const Text("Reservar",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
@@ -494,7 +516,7 @@ class _ReservasScreenState extends State<ReservasScreen> {
                                     backgroundColor:MaterialStatePropertyAll(Colors.black)
                                   ),
                                   onPressed: () {
-                                    
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => MesesScreen(valorMonetario:50),));
                                   },
                                   icon: const Icon(Icons.payments_outlined),
                                   label: const Text("Reservar",style: TextStyle(color: Colors.amber,fontWeight: FontWeight.bold),)
