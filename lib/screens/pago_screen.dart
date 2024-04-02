@@ -99,7 +99,7 @@ class PagoScreen extends StatelessWidget {
                               width: MediaQuery.of(context).size.width*0.82,
                               child: Column(
                                 children: [
-                                  Text(textAlign: TextAlign.justify,"PAYPAL",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                                  Text(textAlign: TextAlign.justify,"VISA / TARJETA",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                                 ],
                               ),
                             ),
@@ -158,7 +158,7 @@ class PagoScreen extends StatelessWidget {
                               width: MediaQuery.of(context).size.width*0.82,
                               child: Column(
                                 children: [
-                                  Text(textAlign: TextAlign.justify,"VISA / TARJETA",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                                  Text(textAlign: TextAlign.justify,"PAYPAL",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                                 ],
                               ),
                             ),
