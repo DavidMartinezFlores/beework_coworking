@@ -168,7 +168,7 @@ class PagoScreen extends StatelessWidget {
                       ),
                     ),
                     
-                    SizedBox(
+                    SizedBox( 
                       height: screenSize.height*0.09,
                     ),
                     
